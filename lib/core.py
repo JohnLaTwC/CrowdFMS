@@ -77,7 +77,7 @@ def func_download_sample(str_api_key, str_path, str_hash):
 def funct_parse_rule_actions():
 		db_cursor = db_notif.cursor()
 		tmp_action_dict = {}
-		sql_rule_actions = 'SELECT rulename, sys_command FROM rule_actions'
+		sql_rule_actions = 'SELECT rulesetname, sys_command FROM ruleset_actions'
 		for tmp_row in db_cursor.execute( sql_rule_actions ):
 			tmp_action_dict[str(tmp_row[0])] = str(tmp_row[1])
 		
